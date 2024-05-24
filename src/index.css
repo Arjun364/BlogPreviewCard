@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+  @apply m-0 p-0 box-border 
+}
+
+@layer components {
+  .body{
+    @apply w-screen h-screen bg-primary-color font-Figtree flex justify-center items-center
+  }
+
+  .heading{
+    @apply font-extrabold text-2xl leading-6 hover:text-primary-color
+  }
+
+  .normal-text{
+    @apply font-medium text-base leading-6 text-secondary-textColor
+  }
+
+  .small-text-bold{
+    @apply font-extrabold text-sm leading-6
+  }
+
+  .small-text-regular{
+    @apply font-medium text-sm leading-6
+  }
+
+  .card{
+    @apply w-96  bg-secondary-color border-2 border-solid border-black flex flex-col justify-center items-center gap-6 hover:cursor-pointer  ;
+    height: 522px;
+    border-radius: 20px;
+    box-shadow: 8px 8px 0px theme("colors.primary-textColor")
+  }
+  
+  .card:hover{
+    box-shadow: 16px 16px 0px theme("colors.primary-textColor");
+    transition: all 500ms ease;
+  }
+
+  .content{
+    @apply flex flex-col justify-center gap-3;
+    width: 336px;
+    
+  }
+  
+  .title{
+    @apply w-20 h-8 bg-primary-color flex justify-center items-center rounded  ;
+  }
+  
+  .userInfo{
+    @apply flex items-center gap-3;
+    width: 336px;
+    
+  }
+}
